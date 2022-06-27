@@ -13,17 +13,43 @@ public class Login extends JPanel{
 		setLayout(null);
 		
 		JPanel login = new JPanel();
-		login.setBounds(370, 130, 700, 700);
+		login.setBounds(185, 65, 350, 300);
 		login.setBackground(new java.awt.Color(217, 217, 217));
 		
 		JLabel userNameLbl = new JLabel("NOM D'UTILISATEUR");
-		userNameLbl.setBounds(400, 165, 312, 35); // dimension
-		userNameLbl.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 25)); // font n height
+		userNameLbl.setBounds(200, 82, 156, 17); // dimension
+		userNameLbl.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 15)); // font n height
 		
 		JTextField userName = new JTextField();
-		userName.setBounds(420, 215, 600, 82);
+		userName.setBounds(210, 107, 300, 35);
 		userName.setBackground(Color.WHITE);
+		userName.setBorder(null);
 		
+		JLabel userPswLbl = new JLabel("MOT DE PASSE");
+		userPswLbl.setBounds(200, 187, 120, 17); // dimension
+		userPswLbl.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 15)); // font n height
+		
+		JTextField userPsw = new JTextField();
+		userPsw.setBounds(210, 212, 300, 35);
+		userPsw.setBackground(Color.WHITE);
+		userPsw.setBorder(null);
+		
+		JLabel pswForgot = new JLabel("Mot de passe oublié ?");
+		pswForgot.setBounds(405, 257, 110, 11); // dimension
+		pswForgot.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 10)); // font n height
+		pswForgot.setForeground(new java.awt.Color(57, 108, 240));
+		
+		// login button
+		JButton btnLogin = new JButton("<html><font color = white> Se connecter </font></html>");
+		btnLogin.setBounds(200, 300, 150, 35);
+		btnLogin.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 15)); // font n height
+		btnLogin.setBackground(new java.awt.Color(39, 170, 243));
+		btnLogin.setBorder(null);
+		
+		add(btnLogin);
+		add(pswForgot);
+		add(userPswLbl);
+		add(userPsw);
 		add(userNameLbl);
 		add(userName);
 		add(login);
