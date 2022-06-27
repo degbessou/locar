@@ -4,16 +4,25 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class mainWindow {
+import tools.Functions;
+
+public class MainWindow {
 	
 	public static JFrame frame;
 	public static Login login;
+	public static JLabel copyright; // for locar text
+	
+	public MainWindow () {
+		
+	}
 	
 	public static void openPanel (JPanel myPanel) {
 		frame.setContentPane(myPanel);
 		frame.repaint();
 		frame.revalidate();
 	}
+	
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -25,11 +34,6 @@ public class mainWindow {
 		frame.setResizable(false);
 		frame.setBackground(new java.awt.Color(246, 245, 245));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		// LOCAR text
-		JLabel copyright = new JLabel("LOCAR : location de véhicules pour particulier");
-		copyright.setBounds(15, 415, 336, 17); // dimension
-		copyright.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 12)); // font n height
 		
 		// welcome panel 
         JPanel accueil = new JPanel();
@@ -49,15 +53,14 @@ public class mainWindow {
 		btnLogin.setBackground(new java.awt.Color(39, 170, 243));
 		btnLogin.setBorder(null);
 		
-		// setting up login action
+		// login action
 		login = new Login ();
 		btnLogin.addActionListener(new ActionListener() {
-			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource() == btnLogin)
 					//mainWindow.frame.setVisible(true);
-					mainWindow.openPanel(login);
+					MainWindow.openPanel(login);
 					//login.start();		
 			}
 		});
@@ -65,7 +68,7 @@ public class mainWindow {
 		frame.add(btnLogin);
 		frame.add(welcome);
         frame.add(accueil);
-		frame.add(copyright); 
+        frame.add(Functions.signature(copyright));
 		frame.setVisible(true);
 
 	}
