@@ -60,6 +60,14 @@ public class Fonctions {
 		btn.setBorder(null);
 		return btn;
 	}
+	
+	public static JLabel titre (JLabel titre, String text) {
+		// title
+		titre = new JLabel(text);
+		titre.setBounds(208, 55, 315, 23); // dimension
+		titre.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 25)); // font n height
+		return titre;
+	}
 //	public static JButton boutton (JButton btn) {
 //		// login button
 //		btn = new JButton("<html><font color= white>Quitter</font></html>");

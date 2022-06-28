@@ -15,11 +15,6 @@ public class InscriptionClient extends JPanel{
 	public void fenetreInscriptionClient() {
 		setLayout(null);
 		
-		// title
-		JLabel titre = new JLabel("INSCRIPTION DU CLIENT");
-		titre.setBounds(208, 55, 315, 23); // dimension
-		titre.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 25)); // font n height
-		
 		// name
 		JLabel nom = new JLabel("NOM");
 		nom.setBounds(20, 105, 250, 15); // dimension
@@ -144,10 +139,10 @@ public class InscriptionClient extends JPanel{
 		add(emailField);
 		add(adresseField);
 		add(prenomField);
-		add(titre);
 		add(MainWindow.enregistrer);
 		add(MainWindow.annuler);
 		add(MainWindow.quitter);
+		add(Fonctions.titre(MainWindow.titre, "INSCRIPTION DU CLIENT"));
 		add(Fonctions.signature(MainWindow.copyright));
 		add(Fonctions.tableaudebordPanel(MainWindow.dash));
 		add(Fonctions.labelNomEmploye(MainWindow.nomEmploye));

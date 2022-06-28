@@ -50,6 +50,16 @@ public class TableauDeBord extends JPanel{
 		}
 	});
 		
+		// location button action
+		btnLocation.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (e.getSource() == btnLocation)
+					MainWindow.location = new Location();
+				MainWindow.ouvrePanel(MainWindow.location);
+			}
+		});
+		
 		// logout button action
 		MainWindow.quitter = Fonctions.bouttonQuitter(MainWindow.quitter);
 		MainWindow.quitter.addActionListener(new ActionListener() {

@@ -16,6 +16,8 @@ public class MainWindow {
 	protected static JLabel nomEmploye;
 	protected static JButton annuler;
 	protected static JButton enregistrer;
+	protected static Location location;
+	protected static JLabel titre;
 	
 	public MainWindow () {
 		
