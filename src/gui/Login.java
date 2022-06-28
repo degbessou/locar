@@ -3,14 +3,13 @@ package gui;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-
 import tools.Functions;
 
 public class Login extends JPanel{
 	
 	public static JFrame frame;
 	public static JLabel copyright; // for locar text
-	public static Dashboard dashboard;
+	public static TableauDeBord tableauDeBord;
 	
 	public Login () {
 		start();
@@ -59,12 +58,12 @@ public class Login extends JPanel{
 		btnLogin.setBorder(null);
 		
 		// login action
-		dashboard = new Dashboard ();
+		tableauDeBord = new TableauDeBord ();
 		btnLogin.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource() == btnLogin)
-					MainWindow.openPanel(dashboard);
+					MainWindow.ouvrePanel(tableauDeBord);
 			}
 		});
 		

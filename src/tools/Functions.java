@@ -36,10 +36,16 @@ public class Functions {
 		
 	}
 	
-//	public static void openPanel (JPanel myPanel) {
-//		frame.setContentPane(myPanel);
-//		frame.repaint();
-//		frame.revalidate();
+//	public static JButton boutton (JButton btn) {
+//		// login button
+//		btn = new JButton("<html><font color= white>Quitter</font></html>");
+//		btn.setBounds(621, 15, 52, 17);
+//		btn.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 10)); // font n height
+//		btn.setBackground(new java.awt.Color(39, 170, 243));
+//		btn.setBorder(null);
+//		return btn;
+//		
 //	}
+
 
 }
