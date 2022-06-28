@@ -4,13 +4,11 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import tools.Functions;
+import tools.Fonctions;
 
 public class Accueil extends JPanel {
 	
 	public static JFrame frame;
-	public static Login login;
-	public static JLabel copyright; // for locar text
 	
 	public Accueil () {
 		fenetreAccueil ();
@@ -38,13 +36,13 @@ public class Accueil extends JPanel {
 		btnLogin.setBorder(null);
 		
 		// login action
-		login = new Login ();
+		MainWindow.login = new Login ();
 		btnLogin.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource() == btnLogin)
 					//mainWindow.frame.setVisible(true);
-					MainWindow.ouvrePanel(login);
+					MainWindow.ouvrePanel(MainWindow.login);
 					//login.start();		
 			}
 		});
@@ -52,7 +50,7 @@ public class Accueil extends JPanel {
 		add(btnLogin);
 		add(welcome);
         add(accueil);
-        add(Functions.signature(copyright));
+        add(Fonctions.signature(MainWindow.copyright));
 	}
 
 }

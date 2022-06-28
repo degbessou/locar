@@ -6,17 +6,11 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import tools.Functions;
+import tools.Fonctions;
 
 public class TableauDeBord extends JPanel{
 	
 	public static JFrame frame;
-	public static JLabel copyright; // for locar text
-	public static JPanel dash;
-	public static Accueil accueil;
-	public static TableauDeBord tableauDeBord;
-	public static InscriptionClient inscription;
-	public static JButton quitter;
 	
 	public TableauDeBord () {
 		fenetreTableauDeBord ();
@@ -46,39 +40,35 @@ public class TableauDeBord extends JPanel{
 		btnCatalogue.setBackground(new java.awt.Color(0, 0, 0));
 		btnCatalogue.setBorder(null);
 		
-		//
-		
+		// subscribe button action
 		btnInscription.addActionListener(new ActionListener() {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == btnInscription)
-				inscription = new InscriptionClient ();
-				MainWindow.ouvrePanel(inscription);		
+				MainWindow.inscription = new InscriptionClient ();
+				MainWindow.ouvrePanel(MainWindow.inscription);		
 		}
 	});
 		
-		
-		
-		quitter = Functions.boutton(quitter, "Quitter");
-		quitter.addActionListener(new ActionListener() {
+		// logout button action
+		MainWindow.quitter = Fonctions.bouttonQuitter(MainWindow.quitter);
+		MainWindow.quitter.addActionListener(new ActionListener() {
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			if (e.getSource() == quitter)
-				accueil = new Accueil ();
-				MainWindow.ouvrePanel(accueil);
+			if (e.getSource() == MainWindow.quitter)
+				MainWindow.accueil = new Accueil ();
+				MainWindow.ouvrePanel(MainWindow.accueil);
 			}
 		});
-		
 		
 		
 		add(btnCatalogue);
 		add(btnLocation);
 		add(btnInscription);
-		add(Functions.signature(copyright));
-		add(Functions.dashboardPanel(dash));
-		add(quitter);
-		
-//		add(Functions.boutton(quitter));
+		add(Fonctions.signature(MainWindow.copyright));
+		add(Fonctions.tableaudebordPanel(MainWindow.dash));
+		add(Fonctions.labelNomEmploye(MainWindow.nomEmploye));
+		add(MainWindow.quitter);
 	}
 	
 	

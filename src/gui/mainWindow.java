@@ -6,9 +6,16 @@ import javax.swing.*;
 public class MainWindow {
 	
 	public static JFrame frame;
-	public static Login login;
-	public static JLabel copyright; // for locar text
-	public static Accueil accueil;
+	protected static Login login;
+	protected static JLabel copyright; // for locar text
+	protected static Accueil accueil;
+	protected static TableauDeBord tableauDeBord;
+	protected static JPanel dash;
+	protected static InscriptionClient inscription;
+	protected static JButton quitter;
+	protected static JLabel nomEmploye;
+	protected static JButton annuler;
+	protected static JButton enregistrer;
 	
 	public MainWindow () {
 		
@@ -19,15 +26,6 @@ public class MainWindow {
 		frame.repaint();
 		frame.revalidate();
 	}
-//	
-//	public static void retourMenu() {
-//		JPanel monMenu = new Accueil();
-//		frame.setContentPane(monMenu);
-//		frame.repaint();
-//		frame.revalidate();
-//	}
-	
-
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
