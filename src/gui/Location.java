@@ -32,6 +32,26 @@ public class Location extends JPanel{
 		btnListeLocation.setBackground(new java.awt.Color(0, 0, 0));
 		btnListeLocation.setBorder(null);
 		
+		// location creation button action
+		btnListeLocation.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (e.getSource() == btnListeLocation)
+					MainWindow.listeLocation = new ListeLocation();
+				MainWindow.ouvrePanel(MainWindow.listeLocation);
+			}
+		});
+		
+		// location creation button action
+		btnCreerLocation.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (e.getSource() == btnCreerLocation)
+					MainWindow.creerLocation = new CreerLocation();
+				MainWindow.ouvrePanel(MainWindow.creerLocation);
+			}
+		});
+		
 		// cancel button action
 		MainWindow.annuler = Fonctions.bouttonAnnuler(MainWindow.annuler);
 		MainWindow.annuler.addActionListener(new ActionListener() {

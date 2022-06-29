@@ -18,6 +18,8 @@ public class MainWindow {
 	protected static JButton enregistrer;
 	protected static Location location;
 	protected static JLabel titre;
+	protected static CreerLocation creerLocation;
+	protected static ListeLocation listeLocation;
 	
 	public MainWindow () {
 		

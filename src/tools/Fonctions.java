@@ -52,8 +52,8 @@ public class Fonctions {
 		return btn;
 	}
 	
-	public static JButton bouttonEnregistrer (JButton btn) {
-		btn = new JButton("<html><font color = white>Enregistrer</font></html>");
+	public static JButton bouttonPersonnalisable (JButton btn, String nom) {
+		btn = new JButton("<html><font color = white>"+nom+"</font></html>");
 		btn.setBounds(475, 370, 95, 30);
 		btn.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 15)); // font n height
 		btn.setBackground(new java.awt.Color(39, 170, 243));

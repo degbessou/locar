@@ -88,12 +88,13 @@ public class InscriptionClient extends JPanel{
 		
 		// age case
 		JTextField ageField = new JTextField();
+		ageField.setEditable(false);
 		ageField.setBounds(535, 260, 150, 25);
 		ageField.setBackground(null);
 		ageField.setBorder(BorderFactory.createLineBorder(Color.black, 2));
 		
 		// save button action
-		MainWindow.enregistrer = Fonctions.bouttonEnregistrer(MainWindow.enregistrer);
+		MainWindow.enregistrer = Fonctions.bouttonPersonnalisable(MainWindow.enregistrer, "Enregistrer");
 		MainWindow.enregistrer.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) { // ajouter la sauvegarde dans la base de donnée
