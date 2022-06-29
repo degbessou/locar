@@ -13,13 +13,16 @@ public class MainWindow {
 	protected static JPanel dash;
 	protected static InscriptionClient inscription;
 	protected static JButton quitter;
-	protected static JLabel nomEmploye;
+	protected static JLabel identifiantEmploye;
 	protected static JButton annuler;
 	protected static JButton enregistrer;
 	protected static Location location;
 	protected static JLabel titre;
 	protected static CreerLocation creerLocation;
 	protected static ListeLocation listeLocation;
+	protected static JLabel identifiantClient;
+	protected static Catalogue catalogue;
+	protected static AjoutVoiture ajoutVoiture;
 	
 	public MainWindow () {
 		

@@ -60,6 +60,16 @@ public class TableauDeBord extends JPanel{
 			}
 		});
 		
+		// catalog button action
+		btnCatalogue.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (e.getSource() == btnCatalogue)
+					MainWindow.catalogue = new Catalogue();
+				MainWindow.ouvrePanel(MainWindow.catalogue);
+			}
+		});
+		
 		// logout button action
 		MainWindow.quitter = Fonctions.bouttonQuitter(MainWindow.quitter);
 		MainWindow.quitter.addActionListener(new ActionListener() {
@@ -77,7 +87,7 @@ public class TableauDeBord extends JPanel{
 		add(btnInscription);
 		add(Fonctions.signature(MainWindow.copyright));
 		add(Fonctions.tableaudebordPanel(MainWindow.dash));
-		add(Fonctions.labelNomEmploye(MainWindow.nomEmploye));
+		add(Fonctions.labelNomEmploye(MainWindow.identifiantEmploye));
 		add(MainWindow.quitter);
 	}
 	

@@ -1,29 +1,29 @@
 package gui;
 
-import java.awt.Font;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JPanel;
+
 import tools.Fonctions;
 
-public class ListeLocation extends JPanel{
-	
-	protected static JButton modifier;
+public class AjoutVoiture extends JPanel{
 
-	public ListeLocation() {
-		fenetreListeLocation();
+	public AjoutVoiture() {
+		fenetreAjoutVoiture();
 	}
 	
-	public void fenetreListeLocation() {
+	public void fenetreAjoutVoiture() {
 		setLayout(null);
+		// save button action
 		
-		// modify button action
-		modifier = Fonctions.bouttonPersonnalisable(modifier, "Modifier");
-		modifier.addActionListener(new ActionListener() {
+		MainWindow.enregistrer = Fonctions.bouttonPersonnalisable(MainWindow.enregistrer, "Enregistrer");
+		MainWindow.enregistrer.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) { // ajouter la sauvegarde dans la base de donnée
-				if (e.getSource() == modifier)
-					MainWindow.creerLocation = new CreerLocation();
-				MainWindow.ouvrePanel(MainWindow.creerLocation);
+				if (e.getSource() == MainWindow.enregistrer)
+					MainWindow.catalogue = new Catalogue();
+				MainWindow.ouvrePanel(MainWindow.catalogue);
 			}
 		});
 		
@@ -33,8 +33,8 @@ public class ListeLocation extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource() == MainWindow.annuler)
-					MainWindow.location = new Location();
-				MainWindow.ouvrePanel(MainWindow.location);
+					MainWindow.catalogue = new Catalogue();
+				MainWindow.ouvrePanel(MainWindow.catalogue);
 			}
 		});
 
@@ -51,12 +51,11 @@ public class ListeLocation extends JPanel{
 		
 		add(MainWindow.quitter);
 		add(MainWindow.annuler);
-		add(modifier);
-		add(Fonctions.titre(MainWindow.titre, "LISTE DES LOCATIONS"));
+		add(MainWindow.enregistrer);
+		add(Fonctions.titre(MainWindow.titre, "AJOUT D'UNE VOITURE"));
 		add(Fonctions.signature(MainWindow.copyright));
 		add(Fonctions.tableaudebordPanel(MainWindow.dash));
 		add(Fonctions.labelNomEmploye(MainWindow.identifiantEmploye));
-		
 	}
 
 }

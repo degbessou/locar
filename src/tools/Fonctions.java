@@ -37,8 +37,16 @@ public class Fonctions {
 	
 	public static JLabel labelNomEmploye (JLabel label) {
 		// login button
-		label = new JLabel("<html><font color= #396CF0>nomEmploye</font></html>"); // faire un get pour obtenir le nom de l'employé connecté
-		label.setBounds(45, 15, 100, 17); // dimension
+		label = new JLabel("<html><font color= #396CF0>identifiantEmploye</font></html>"); // faire un get pour obtenir l'identifiant de l'employé connecté
+		label.setBounds(30, 15, 100, 17); // dimension
+		label.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 12)); // font n height
+		return label;
+	}
+	
+	public static JLabel labelNomClient (JLabel label) {
+		// login button
+		label = new JLabel("<html><font color= #396CF0>identifiantClient</font></html>"); // faire un get pour obtenir l'identifiant du client connecté
+		label.setBounds(30, 385, 100, 17); // dimension
 		label.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 12)); // font n height
 		return label;
 	}

@@ -135,6 +135,16 @@ public class CreerLocation extends JPanel{
 		distanceSuppField.setBackground(Color.WHITE);
 		distanceSuppField.setBorder(null);
 
+		// select car button action
+		choixVoiture.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) { // ajouter la sauvegarde dans la base de donnée
+				if (e.getSource() == choixVoiture)
+					MainWindow.catalogue = new Catalogue();
+				MainWindow.ouvrePanel(MainWindow.catalogue);
+			}
+		});
+		
 		// save button action
 		MainWindow.enregistrer = Fonctions.bouttonPersonnalisable(MainWindow.enregistrer, "Enregistrer");
 		MainWindow.enregistrer.addActionListener(new ActionListener() {
@@ -191,13 +201,14 @@ public class CreerLocation extends JPanel{
 		add(heureFinBox);
 		add(dateExpPermisField);
 		add(distanceSuppField);
+		add(Fonctions.labelNomClient(MainWindow.identifiantClient));
 		add(MainWindow.enregistrer);
 		add(MainWindow.quitter);
 		add(MainWindow.annuler);
 		add(Fonctions.titre(MainWindow.titre, "LOCATION - CRITÈRES"));
 		add(Fonctions.signature(MainWindow.copyright));
 		add(Fonctions.tableaudebordPanel(MainWindow.dash));
-		add(Fonctions.labelNomEmploye(MainWindow.nomEmploye));
+		add(Fonctions.labelNomEmploye(MainWindow.identifiantEmploye));
 	}
 
 }

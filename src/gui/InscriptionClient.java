@@ -146,7 +146,7 @@ public class InscriptionClient extends JPanel{
 		add(Fonctions.titre(MainWindow.titre, "INSCRIPTION DU CLIENT"));
 		add(Fonctions.signature(MainWindow.copyright));
 		add(Fonctions.tableaudebordPanel(MainWindow.dash));
-		add(Fonctions.labelNomEmploye(MainWindow.nomEmploye));
+		add(Fonctions.labelNomEmploye(MainWindow.identifiantEmploye));
 		
 
 		

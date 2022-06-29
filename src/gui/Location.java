@@ -69,7 +69,7 @@ public class Location extends JPanel{
 		add(MainWindow.annuler);
 		add(Fonctions.signature(MainWindow.copyright));
 		add(Fonctions.tableaudebordPanel(MainWindow.dash));
-		add(Fonctions.labelNomEmploye(MainWindow.nomEmploye));
+		add(Fonctions.labelNomEmploye(MainWindow.identifiantEmploye));
 		
 	}
 
