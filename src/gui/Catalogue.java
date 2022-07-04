@@ -141,6 +141,7 @@ public class Catalogue extends JPanel{
 		add(listeVoitureField);
 		add(btnAjouter);
 		add(btnSupprimer);
+		add(Fonctions.labelNomClient(MainWindow.identifiantClient));
 		add(choisir);
 		add(MainWindow.quitter);
 		add(MainWindow.annuler);
@@ -148,7 +149,7 @@ public class Catalogue extends JPanel{
 		add(Fonctions.signature(MainWindow.copyright));
 		add(Fonctions.tableaudebordPanel(MainWindow.dash));
 		add(Fonctions.labelNomEmploye(MainWindow.identifiantEmploye));
-		add(Fonctions.labelNomClient(MainWindow.identifiantClient));
+		
 	}
 
 }

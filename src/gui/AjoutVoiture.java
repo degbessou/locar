@@ -1,11 +1,14 @@
 package gui;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import tools.Fonctions;
 
@@ -59,6 +62,54 @@ public class AjoutVoiture extends JPanel{
 		kilometrage.setBounds(385, 265, 250, 15); // dimension
 		kilometrage.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 12)); // font n height
 		
+		// category box
+		JComboBox categorieBox = new JComboBox();
+		categorieBox.setBounds(140, 140, 130, 20);
+		categorieBox.setBackground(Color.WHITE);
+		categorieBox.setBorder(null);
+
+		// brand box
+		JComboBox brandBox = new JComboBox();
+		brandBox.setBounds(140, 180, 130, 20);
+		brandBox.setBackground(Color.WHITE);
+		brandBox.setBorder(null);
+
+		// model box
+		JComboBox modelBox = new JComboBox();
+		modelBox.setBounds(140, 220, 130, 20);
+		modelBox.setBackground(Color.WHITE);
+		modelBox.setBorder(null);
+
+		// year field
+		JTextField anneeField = new JTextField();
+		anneeField.setBounds(140, 260, 130, 20);
+		anneeField.setBackground(Color.WHITE);
+		anneeField.setBorder(null);
+		
+		// registration
+		JTextField immatriculationField = new JTextField(); // check jdatePicker
+		immatriculationField.setBounds(555, 140, 130, 20);
+		immatriculationField.setBackground(Color.WHITE);
+		immatriculationField.setBorder(null);
+
+		// buying date
+		JTextField dateAchatField = new JTextField();
+		dateAchatField.setBounds(555, 180, 130, 20);
+		dateAchatField.setBackground(Color.WHITE);
+		dateAchatField.setBorder(null);
+
+		// color
+		JTextField couleurField = new JTextField();
+		couleurField.setBounds(555, 220, 130, 20);
+		couleurField.setBackground(Color.WHITE);
+		couleurField.setBorder(null);
+
+		// kilometer
+		JTextField kilometrageField = new JTextField();
+		kilometrageField.setBounds(555, 260, 130, 20);
+		kilometrageField.setBackground(Color.WHITE);
+		kilometrageField.setBorder(null);
+		
 		// save button action
 		MainWindow.enregistrer = Fonctions.bouttonPersonnalisable(MainWindow.enregistrer, "Enregistrer");
 		MainWindow.enregistrer.addActionListener(new ActionListener() {
@@ -100,7 +151,14 @@ public class AjoutVoiture extends JPanel{
 		add(modele);
 		add(marque);
 		add(categorie);
-		
+		add(kilometrageField);
+		add(couleurField);
+		add(dateAchatField);
+		add(immatriculationField);
+		add(anneeField);
+		add(modelBox);
+		add(brandBox);
+		add(categorieBox);
 		add(MainWindow.quitter);
 		add(MainWindow.annuler);
 		add(MainWindow.enregistrer);
@@ -108,6 +166,7 @@ public class AjoutVoiture extends JPanel{
 		add(Fonctions.signature(MainWindow.copyright));
 		add(Fonctions.tableaudebordPanel(MainWindow.dash));
 		add(Fonctions.labelNomEmploye(MainWindow.identifiantEmploye));
+		add(Fonctions.labelNomClient(MainWindow.identifiantClient));
 	}
 
 }

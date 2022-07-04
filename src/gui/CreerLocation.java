@@ -73,7 +73,7 @@ public class CreerLocation extends JPanel{
 		distanceSupp.setBounds(385, 305, 250, 15); // dimension
 		distanceSupp.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 12)); // font n height
 		
-		// select car button action
+		
 		// clientbox
 		JComboBox clientBox = new JComboBox();
 		clientBox.setBounds(225, 140, 130, 20);
